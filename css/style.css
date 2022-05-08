@@ -793,13 +793,13 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-field-comment {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 .modal-text {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -831,20 +831,35 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .check-icon {
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.input-check:focus + .check-text > .check-icon-border {
+  border-color: var(--accent-color-modal);
+}
+.input-check:hover + .check-text > .check-icon-border {
+  border-color: var(--accent-color-modal);
+}
+
 .input-check:checked + .check-text > .check-icon-border {
   background-color: var(--accent-color-modal);
   border: none;
 }
+
 .input-check:checked + .check-text .check-icon {
   fill: #ffffff;
 }
 .policy-link {
   color: var(--accent-color-modal);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.policy-link:hover,
+.policy-link:focus {
+  color: var(--hero-button-background-color-focus-hover);
+}
+
 .modal-field-check {
   margin-bottom: 30px;
 }
